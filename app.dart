@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_flutter_handle/widgets/auth.dart';
 import 'package:test_flutter_handle/widgets/task1.dart';
 // import 'package:test_flutter_handle/widgets/task1.dart';
 // import 'package:test_flutter_handle/widgets/simulatorscreen.dart';
@@ -9,25 +10,8 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: DefaultTabController(
-        length: 2,
-        child: Scaffold(
-          appBar: AppBar(
-            bottom: const TabBar(
-              tabs: [
-                Tab(icon: Icon(Icons.one_k)),
-                Tab(icon: Icon(Icons.two_k)),
-              ],
-            ),
-            title: const Text('Home tasks'),
-          ),
-          body: const TabBarView(children: [
-            ScreenSimulator(),
-            Squares(),
-          ]),
-        ),
-      ),
+    return const MaterialApp(
+      home: AuthWidget(),
     );
   }
 }
